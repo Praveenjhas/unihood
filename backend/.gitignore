@@ -1,0 +1,68 @@
+# The backend's own ignore rules; the root .gitignore already covers the usual
+# Expo/Metro noise, so this file only lists server-side artefacts.
+
+node_modules/
+dist/
+
+# Secrets: real configuration lives in `.env`, which is never committed.
+.env
+.env.*.local
+
+# Emails written by the `log` transport while no SMTP provider is configured.
+.mail-outbox/
+
+# Database snapshots taken by `npm run db:backup` / `db:reset`
+# (`src/tools/resetData.ts`). They contain real user rows - phone numbers, chat
+# messages, password hashes - so they are developer-local artefacts and never
+# committed. Restore one with RESET_BACKUP_DIR=<name> npm run db:restore.
+.backups/
+
+# One-time codes written by the `log` OTP transport during local development.
+# Never committed: the file contains a live credential for five minutes.
+.otp-outbox/
+
+*.log
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Build outputs
+dist/
+build/
+.expo/
+web-build/
+coverage/
+.next/
+
+# Logs and temporary diagnostics
+*.log
+*.pid
+*.tmp
+.tmp-*
+.lint-mobile.txt
+.tsc-*.txt
+
+# Local resource uploads and runtime data
+**/var/resource-uploads/
+**/resource-uploads/
+.pgdata/
+*.sqlite
+*.sqlite3
+*.db
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# TypeScript build artifacts
+*.tsbuildinfo
+
