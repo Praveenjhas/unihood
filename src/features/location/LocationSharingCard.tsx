@@ -62,7 +62,7 @@ export function LocationSharingCard({ enabled, initialUpdatedAt = null, onChange
       <AppText variant="meta">
         Unihood stores one coarse area, rounded to about 11 m, and only while nearby discovery is on. It stays saved
         until you change it, remove it or close your account — and it is visible only as a distance, never as a pin on
-        anyone else's map. Update it whenever you move, or whenever you want a
+        anyone else’s map. Update it whenever you move, or whenever you want a
         different local community.
       </AppText>
 
